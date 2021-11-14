@@ -1,0 +1,31 @@
+﻿<Window x:Class="AMONIC.AutomationSystem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AMONIC"
+        mc:Ignorable="d"
+          Title="AMONIC Airline Automation System" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="1.5*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <MenuItem Header="Add User" Click="MenuItem_Click"/>
+            <MenuItem Header="Exit" Click="MenuItem_Click_2"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Label Content="Office" Margin="15 5" Padding="10"/>
+            <ComboBox Width="200" Margin="15 5"/>
+        </StackPanel>
+        <DataGrid Grid.Row="2"/>
+        <StackPanel Grid.Row="3" Orientation="Horizontal">
+            <Button Content="Change Roll" Click="Button_Click" Width="200" Height="25" Margin="20 10"/>
+            <Button Content="Enable/Disable Login"  Height="25" Margin="0 10" Width="200"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
