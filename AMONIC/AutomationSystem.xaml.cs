@@ -19,9 +19,26 @@ namespace AMONIC
     /// </summary>
     public partial class AutomationSystem : Window
     {
+        
         public AutomationSystem()
         {
             InitializeComponent();
+            session1Entities1 dbUser = new session1Entities1();
+            dtgGrid.ItemsSource = dbUser.UserViews.Select(c => new
+            {
+                Name = c.FirstName,
+                LName = c.LastName,
+                UserRole = c.User_Role,
+                Email = c.Email,
+                Office = c.Office
+
+            }).ToList();
+
+            cbOffice.ItemsSource = dbUser.Offices.Select(c => new
+            {
+                c.Title
+            }).ToList();
+
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)

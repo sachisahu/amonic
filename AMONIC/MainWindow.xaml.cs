@@ -18,8 +18,10 @@ namespace AMONIC
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    
     public partial class MainWindow : Window
     {
+        session1Entities1 dbo;
         public MainWindow()
         {
             InitializeComponent();
@@ -28,8 +30,26 @@ namespace AMONIC
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            AutomationSystem autoSys = new AutomationSystem();
-            autoSys.Show();
+            dbo = new session1Entities1();
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+            var row = dbo.Users.Where(c => c.Email == username && c.Password == password).FirstOrDefault();
+
+            /*AutomationSystem autoSys = new AutomationSystem();
+            autoSys.Show();*/
+            if (row == null)
+            {
+                MessageBox.Show("Invalid Credentials");
+            }
+
+            else
+            {
+                AutomationSystem autoSys = new AutomationSystem();
+                autoSys.Show();
+                MessageBox.Show("Login Success");
+            }
+                
+
 
         }
     }

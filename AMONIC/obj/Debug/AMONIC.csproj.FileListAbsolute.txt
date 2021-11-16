@@ -21,3 +21,8 @@ D:\itssb\New P\AMONIC\AMONIC\obj\Debug\Window1.g.cs
 D:\itssb\New P\AMONIC\AMONIC\obj\Debug\AutomationSystem.baml
 D:\itssb\New P\AMONIC\AMONIC\obj\Debug\EditRole.baml
 D:\itssb\New P\AMONIC\AMONIC\obj\Debug\Window1.baml
+D:\itssb\New P\AMONIC\AMONIC\bin\Debug\EntityFramework.dll
+D:\itssb\New P\AMONIC\AMONIC\bin\Debug\EntityFramework.SqlServer.dll
+D:\itssb\New P\AMONIC\AMONIC\bin\Debug\EntityFramework.xml
+D:\itssb\New P\AMONIC\AMONIC\bin\Debug\EntityFramework.SqlServer.xml
+D:\itssb\New P\AMONIC\AMONIC\obj\Debug\AMONIC_Content.g.cs

@@ -19,11 +19,11 @@
         </StackPanel>
         <StackPanel Grid.Row="1" Orientation="Horizontal">
             <Label Content="UserName"  Height="30" Margin="50 20 20 20"/>
-            <TextBox Height="30" Width="600" Margin="15"></TextBox> 
+            <TextBox x:Name="txtUsername" Height="30" Width="600" Margin="15"></TextBox> 
         </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Horizontal">
             <Label Content="PassWord"  Height="30" Margin="50 20 20 20"/>
-            <TextBox Height="30" Width="600" Margin="15"></TextBox>
+            <TextBox x:Name="txtPassword" Height="30" Width="600" Margin="15"></TextBox>
         </StackPanel>
         <StackPanel Grid.Row="3" Orientation="Horizontal">
             <Button Content="Login" Click="Button_Click" Height="25" Width="250" Margin="170 10 10 10"/>

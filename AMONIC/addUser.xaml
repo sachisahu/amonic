@@ -20,15 +20,15 @@
             <Label Content="Password" HorizontalAlignment="Right" Margin="10" Width="100"/>
         </StackPanel>
         <StackPanel Grid.Column="1" >
-            <TextBox Width="300" Margin="10 55 10 10" HorizontalAlignment="Left"/>
-            <TextBox Width="300" Margin="10 15 10 10" HorizontalAlignment="Left"/>
-            <TextBox Width="300" Margin="10 15 10 10" HorizontalAlignment="Left"/>
-            <ComboBox Width="300" Margin="10 15 10 10" HorizontalAlignment="Left"/>
-            <DatePicker Width="300" Margin="10 15 10 10" HorizontalAlignment="Left"/>
-            <TextBox Width="300" Margin="10 15 10 10" HorizontalAlignment="Left"/>
+            <TextBox x:Name="txtEmail" Width="300" Margin="10 55 10 10" HorizontalAlignment="Left"/>
+            <TextBox x:Name="txtFName" Width="300" Margin="10 15 10 10" HorizontalAlignment="Left"/>
+            <TextBox x:Name="txtLName" Width="300" Margin="10 15 10 10" HorizontalAlignment="Left"/>
+            <ComboBox x:Name="cbOffice" Width="300" Margin="10 15 10 10" HorizontalAlignment="Left"/>
+            <DatePicker x:Name="dpBirth" Width="300" Margin="10 15 10 10" HorizontalAlignment="Left"/>
+            <TextBox x:Name="txtPassword" Width="300" Margin="10 15 10 10" HorizontalAlignment="Left"/>
         </StackPanel>
         <StackPanel Grid.ColumnSpan="2" Margin="10 350 10 10" Orientation="Horizontal">
-            <Button Content="Save" Width="150" Height="30" Margin="100 10 10 10"/>
+            <Button x:Name="btnSave" Content="Save" Width="150" Height="30" Click="btnSave_Click" Margin="100 10 10 10"/>
             <Button Content="Cancel" Width="150" Height="30" Margin="20 10"/>
         </StackPanel>
         
