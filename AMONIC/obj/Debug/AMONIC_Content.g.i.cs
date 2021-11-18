@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("entitydata.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("entitydata.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("usermodel.context.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("usermodel.tt")]
 

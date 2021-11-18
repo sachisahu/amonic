@@ -1,0 +1,50 @@
+﻿<Window x:Class="AMONIC.UnsuccessfullLogut"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AMONIC"
+        mc:Ignorable="d"
+        Title="AMONIC Airline Automation System" Height="450" Width="800">
+    <Grid>
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.6*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="9*"/>
+
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <MenuItem Header="Exit" x:Name="menuExit" />
+            <MenuItem Header="Logout Dectation" x:Name="menuLogoutDetectation" />
+        </StackPanel>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Time Spend On System: " Grid.Column="0"/>
+                <Label Content="00:19:03" Grid.Column="1"/>
+            </Grid>
+            <Grid Grid.Column="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Content="No Of Crashes:" Grid.Column="0" HorizontalAlignment="Right"/>
+                <Label Content="1" Grid.Column="1" HorizontalAlignment="Left"/>
+            </Grid>
+        </Grid>
+        <Label Content="Hi Henri, Welcome to AMONIC Airline" Grid.Row="1" Margin="10"/>
+        <DataGrid Grid.Row="3" Margin="10"/>
+
+    </Grid>
+</Window>

@@ -26,3 +26,7 @@ D:\itssb\New P\AMONIC\AMONIC\bin\Debug\EntityFramework.SqlServer.dll
 D:\itssb\New P\AMONIC\AMONIC\bin\Debug\EntityFramework.xml
 D:\itssb\New P\AMONIC\AMONIC\bin\Debug\EntityFramework.SqlServer.xml
 D:\itssb\New P\AMONIC\AMONIC\obj\Debug\AMONIC_Content.g.cs
+D:\itssb\New P\AMONIC\AMONIC\obj\Debug\LogoutDetectation.g.cs
+D:\itssb\New P\AMONIC\AMONIC\obj\Debug\UnsuccessfullLogut.g.cs
+D:\itssb\New P\AMONIC\AMONIC\obj\Debug\LogoutDetectation.baml
+D:\itssb\New P\AMONIC\AMONIC\obj\Debug\UnsuccessfullLogut.baml

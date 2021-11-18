@@ -21,7 +21,7 @@ namespace AMONIC
     
     public partial class MainWindow : Window
     {
-        session1Entities1 dbo;
+        AmonicDB dbo;
         public MainWindow()
         {
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace AMONIC
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            dbo = new session1Entities1();
+            dbo = new AmonicDB();
             string username = txtUsername.Text;
             string password = txtPassword.Text;
             var row = dbo.Users.Where(c => c.Email == username && c.Password == password).FirstOrDefault();
@@ -46,7 +46,6 @@ namespace AMONIC
             {
                 AutomationSystem autoSys = new AutomationSystem();
                 autoSys.Show();
-                MessageBox.Show("Login Success");
             }
                 
 

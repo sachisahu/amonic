@@ -22,8 +22,9 @@ namespace AMONIC
         
         public AutomationSystem()
         {
+            AmonicDB dbo = new AmonicDB();
             InitializeComponent();
-            session1Entities1 dbUser = new session1Entities1();
+            AmonicDB dbUser = new AmonicDB();
             dtgGrid.ItemsSource = dbUser.UserViews.Select(c => new
             {
                 Name = c.FirstName,
@@ -34,10 +35,12 @@ namespace AMONIC
 
             }).ToList();
 
-            cbOffice.ItemsSource = dbUser.Offices.Select(c => new
-            {
-                c.Title
-            }).ToList();
+            Office os = (Office)cbOffice.SelectedItem;
+            cbOffice.ItemsSource = dbo.Offices.ToList();
+            cbOffice.DisplayMemberPath = "Title";
+            cbOffice.SelectedValuePath = "ID";
+
+            
 
         }
 

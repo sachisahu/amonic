@@ -19,24 +19,26 @@ namespace AMONIC
     /// </summary>
     public partial class addUser : Window
     {
-        session1Entities1 dbo;
+        AmonicDB dbo;
         public addUser()
         {
             InitializeComponent();
-            dbo = new session1Entities1();
-            cbOffice.ItemsSource = dbo.Offices.Select(c => new
-            {
-                title = c.Title
-            }).ToList();
+            dbo = new AmonicDB();
+            cbOffice.ItemsSource = dbo.Offices.ToList();
+            cbOffice.DisplayMemberPath = "Title";
+            cbOffice.SelectedValuePath = "ID";
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             User user = new User();
+            user.RoleID = 2;
+            user.Active = true;
             user.Email = txtEmail.Text;
             user.FirstName = txtFName.Text;
             user.LastName = txtLName.Text;
-            user.OfficeID = cbOffice.SelectedIndex;
+            Office os = (Office)cbOffice.SelectedItem;
+            user.OfficeID = os.ID;
             user.Birthdate = dpBirth.SelectedDate.Value;
             user.Password = txtPassword.Text;
             dbo.Users.Add(user);
