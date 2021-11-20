@@ -35,8 +35,7 @@ namespace AMONIC
             string password = txtPassword.Text;
             var row = dbo.Users.Where(c => c.Email == username && c.Password == password).FirstOrDefault();
 
-            /*AutomationSystem autoSys = new AutomationSystem();
-            autoSys.Show();*/
+            
             if (row == null)
             {
                 MessageBox.Show("Invalid Credentials");
@@ -47,9 +46,11 @@ namespace AMONIC
                 AutomationSystem autoSys = new AutomationSystem();
                 autoSys.Show();
             }
-                
+        }
 
-
+        private void exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -66,6 +66,7 @@
     <EntitySetMapping Name="UserViews">
       <EntityTypeMapping TypeName="session1Model.UserView">
         <MappingFragment StoreEntitySet="UserView">
+          <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
           <ScalarProperty Name="OfficeID" ColumnName="OfficeID" />
           <ScalarProperty Name="Office" ColumnName="Office" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />

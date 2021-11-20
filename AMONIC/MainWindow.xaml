@@ -27,7 +27,7 @@
         </StackPanel>
         <StackPanel Grid.Row="3" Orientation="Horizontal">
             <Button Content="Login" Click="Button_Click" Height="25" Width="250" Margin="170 10 10 10"/>
-            <Button Content="Exit" Height="25" Width="250" Margin="10"/>
+            <Button x:Name="exit" Content="Exit" Height="25" Width="250" Margin="10" Click="exit_Click"/>
         </StackPanel>
         
 

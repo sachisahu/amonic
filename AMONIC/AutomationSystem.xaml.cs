@@ -25,6 +25,9 @@ namespace AMONIC
             AmonicDB dbo = new AmonicDB();
             InitializeComponent();
             AmonicDB dbUser = new AmonicDB();
+            
+            
+
             dtgGrid.ItemsSource = dbUser.UserViews.Select(c => new
             {
                 Name = c.FirstName,
@@ -32,6 +35,7 @@ namespace AMONIC
                 UserRole = c.User_Role,
                 Email = c.Email,
                 Office = c.Office
+                
 
             }).ToList();
 
@@ -63,8 +67,20 @@ namespace AMONIC
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
+        }
+
+        private void changeRoll_Click(object sender, RoutedEventArgs e)
+        {
             EditRole er = new EditRole();
             er.Show();
+            
+        }
+
+        private void dtgGrid_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
+        {
+            EditRole er = new EditRole();
+            
         }
     }
 }

@@ -65,8 +65,8 @@ warning 6002: The table/view 'session1.dbo.UserView' does not have a primary key
   <EntityType Name="UserView">
     <Key>
       <PropertyRef Name="Office" />
-      <PropertyRef Name="Email" />
       <PropertyRef Name="User Role" />
+      <PropertyRef Name="Email" />
       <PropertyRef Name="LastName" />
     </Key>
     <Property Name="OfficeID" Type="int" />
@@ -75,6 +75,7 @@ warning 6002: The table/view 'session1.dbo.UserView' does not have a primary key
     <Property Name="Email" Type="nvarchar" MaxLength="150" Nullable="false" />
     <Property Name="User Role" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Birthdate" Type="date" />
   </EntityType>
   <Association Name="FK_Office_Country">
     <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
@@ -132,7 +133,8 @@ warning 6002: The table/view 'session1.dbo.UserView' does not have a primary key
     [UserView].[FirstName] AS [FirstName], 
     [UserView].[Email] AS [Email], 
     [UserView].[User Role] AS [User Role], 
-    [UserView].[LastName] AS [LastName]
+    [UserView].[LastName] AS [LastName], 
+    [UserView].[Birthdate] AS [Birthdate]
     FROM [dbo].[UserView] AS [UserView]</DefiningQuery>
     </EntitySet>
     <AssociationSet Name="FK_Office_Country" Association="Self.FK_Office_Country">
