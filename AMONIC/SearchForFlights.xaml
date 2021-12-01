@@ -1,0 +1,75 @@
+﻿<Window x:Class="AMONIC.SearchForFlights"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AMONIC"
+        mc:Ignorable="d"
+        Title="SearchForFlights" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="From" VerticalAlignment="Center"/>
+            <ComboBox Grid.Column="0" Width="200" HorizontalAlignment="Right"  VerticalAlignment="Center"/>
+            <Label Grid.Column="1" Content="To" VerticalAlignment="Center"/>
+            <ComboBox Grid.Column="1" Width="200" HorizontalAlignment="Right"  VerticalAlignment="Center"/>
+            <Label Grid.Column="2" Content="Sort By" VerticalAlignment="Center"/>
+            <ComboBox Grid.Column="2" Width="200" HorizontalAlignment="Right"  VerticalAlignment="Center"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <RadioButton Content="Return" Grid.Column="0" VerticalAlignment="Center"/>
+            <RadioButton Content="One Way" Grid.Column="1" VerticalAlignment="Center"/>
+            <Label Content="OutBound" Grid.Column="2" VerticalAlignment="Center"/>
+            <DatePicker Grid.Column="2" Width="150" Height="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <Label Content="Return" Grid.Column="3" VerticalAlignment="Center"/>
+            <DatePicker Grid.Column="3" Width="150" Height="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <Button Content="Apply" Grid.Column="4" Width="100" Height="20" VerticalAlignment="Center"/>
+        </Grid>
+        <Label Content="OutBound Flight Details" Grid.Row="2"/>
+        <CheckBox Content="Display Three days before and after" Margin="0 0 20 0" Grid.Row="2" HorizontalAlignment="Right"/>
+        <DataGrid Grid.Row="2" Margin="0 20"/>
+
+        <Label Content="Return Flight Details" Grid.Row="3"/>
+        <CheckBox Content="Display Three days before and after" Margin="0 0 20 0" Grid.Row="3" HorizontalAlignment="Right"/>
+        <DataGrid Grid.Row="3" Margin="0 20"/>
+
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                <TextBox Grid.Column="1" Height="20" Width="60" HorizontalAlignment="Left" />
+                <Label Content="Passengers" Grid.Column="1" HorizontalAlignment="Right"/>
+            </StackPanel>
+            <Button Content="Book Flight" Grid.Column="2" Height="20" Width="90" x:Name="bookFlight" Click="bookFlight_Click"/>
+
+            <Button Content="Cancel" Grid.Column="3" Height="20" Width="90"/>
+
+        </Grid>
+
+
+
+    </Grid>
+</Window>

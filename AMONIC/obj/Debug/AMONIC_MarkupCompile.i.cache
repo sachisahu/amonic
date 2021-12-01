@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\itssb\New P\AMONIC\AMONIC\App.xaml
-7-856232192
+13-1499240935
 4-227532330
-27-941476740
+34105373111
 201280453595
-addUser.xaml;AutomationSystem.xaml;EditRole.xaml;LogoutDetectation.xaml;MainWindow.xaml;UnsuccessfullLogut.xaml;Window1.xaml;
+addUser.xaml;All.xaml;AutomationSystem.xaml;BillingConfirmation.xaml;BookingConfirmation.xaml;EditRole.xaml;LogoutDetectation.xaml;MainWindow.xaml;ManageFlightSchedules.xaml;ScheduleEdit.xaml;SearchForFlights.xaml;UnsuccessfullLogut.xaml;Window1.xaml;
 
 True
 

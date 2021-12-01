@@ -25,6 +25,8 @@ namespace AMONIC
             AmonicDB dbo = new AmonicDB();
             InitializeComponent();
             AmonicDB dbUser = new AmonicDB();
+
+         
             
             
 
@@ -80,7 +82,39 @@ namespace AMONIC
         private void dtgGrid_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
         {
             EditRole er = new EditRole();
+            //er.Email.Text = e.
             
         }
+
+        private void dtgGrid_LoadingRow(object sender, DataGridRowEventArgs e)
+        {
+
+        }
+
+        private void manageFlightSchedules_Click(object sender, RoutedEventArgs e)
+        {
+            ManageFlightSchedules mfs = new ManageFlightSchedules();
+            mfs.Show();
+        }
+
     }
+    public class userD
+    {
+        public string Firstname { get; set; }
+        public string Lastname { get; set; }
+
+    }
+    /*public List<userD> LoadUser()
+    {
+        AmonicDB dbUser = new AmonicDB();
+        List<userD> userd = new List<userD>();
+        userd.Add = dbUser.Users.ToList();
+
+
+
+    
+     }*/
+
 }
+
+

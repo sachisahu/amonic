@@ -50,7 +50,10 @@ namespace AMONIC
 
         private void exit_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            //this.Close();
+
+            All all = new All();
+            all.Show();
         }
     }
 }

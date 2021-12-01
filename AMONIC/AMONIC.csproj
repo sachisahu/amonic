@@ -69,12 +69,22 @@
     <Compile Include="addUser.xaml.cs">
       <DependentUpon>addUser.xaml</DependentUpon>
     </Compile>
+    <Compile Include="All.xaml.cs">
+      <DependentUpon>All.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AutomationSystem.xaml.cs">
       <DependentUpon>AutomationSystem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BillingConfirmation.xaml.cs">
+      <DependentUpon>BillingConfirmation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BookingConfirmation.xaml.cs">
+      <DependentUpon>BookingConfirmation.xaml</DependentUpon>
     </Compile>
     <Compile Include="Country.cs">
       <DependentUpon>EntityData.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataGridItem.cs" />
     <Compile Include="EntityData.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -93,6 +103,9 @@
     <Compile Include="LogoutDetectation.xaml.cs">
       <DependentUpon>LogoutDetectation.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ManageFlightSchedules.xaml.cs">
+      <DependentUpon>ManageFlightSchedules.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Office.cs">
       <DependentUpon>EntityData.tt</DependentUpon>
     </Compile>
@@ -101,6 +114,12 @@
     </Compile>
     <Compile Include="RoleUser.cs">
       <DependentUpon>EntityData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduleEdit.xaml.cs">
+      <DependentUpon>ScheduleEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchForFlights.xaml.cs">
+      <DependentUpon>SearchForFlights.xaml</DependentUpon>
     </Compile>
     <Compile Include="sp_helpdiagramdefinition_Result.cs">
       <DependentUpon>EntityData.tt</DependentUpon>
@@ -142,7 +161,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="All.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AutomationSystem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BillingConfirmation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BookingConfirmation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -169,6 +200,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ManageFlightSchedules.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ScheduleEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchForFlights.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UnsuccessfullLogut.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
