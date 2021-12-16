@@ -69,6 +69,12 @@
     <Compile Include="addUser.xaml.cs">
       <DependentUpon>addUser.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Aircraft.cs">
+      <DependentUpon>Session3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Airport.cs">
+      <DependentUpon>Session3Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="All.xaml.cs">
       <DependentUpon>All.xaml</DependentUpon>
     </Compile>
@@ -81,8 +87,11 @@
     <Compile Include="BookingConfirmation.xaml.cs">
       <DependentUpon>BookingConfirmation.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CabinType.cs">
+      <DependentUpon>Session3Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Country.cs">
-      <DependentUpon>EntityData.tt</DependentUpon>
+      <DependentUpon>Session3Model.tt</DependentUpon>
     </Compile>
     <Compile Include="DataGridItem.cs" />
     <Compile Include="EntityData.Context.cs">
@@ -107,19 +116,55 @@
       <DependentUpon>ManageFlightSchedules.xaml</DependentUpon>
     </Compile>
     <Compile Include="Office.cs">
-      <DependentUpon>EntityData.tt</DependentUpon>
+      <DependentUpon>Session3Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Role.cs">
-      <DependentUpon>EntityData.tt</DependentUpon>
+      <DependentUpon>Session3Model.tt</DependentUpon>
     </Compile>
     <Compile Include="RoleUser.cs">
       <DependentUpon>EntityData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Route.cs">
+      <DependentUpon>Session3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule.cs">
+      <DependentUpon>Session3Model.tt</DependentUpon>
     </Compile>
     <Compile Include="ScheduleEdit.xaml.cs">
       <DependentUpon>ScheduleEdit.xaml</DependentUpon>
     </Compile>
     <Compile Include="SearchForFlights.xaml.cs">
       <DependentUpon>SearchForFlights.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Session2Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Session2Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Session2Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Session2Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Session2Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Session2Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Session3Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Session3Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Session3Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Session3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Session3Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Session3Model.edmx</DependentUpon>
     </Compile>
     <Compile Include="sp_helpdiagramdefinition_Result.cs">
       <DependentUpon>EntityData.tt</DependentUpon>
@@ -130,11 +175,14 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>EntityData.tt</DependentUpon>
     </Compile>
+    <Compile Include="Ticket.cs">
+      <DependentUpon>Session3Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="UnsuccessfullLogut.xaml.cs">
       <DependentUpon>UnsuccessfullLogut.xaml</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
-      <DependentUpon>EntityData.tt</DependentUpon>
+      <DependentUpon>Session3Model.tt</DependentUpon>
     </Compile>
     <Compile Include="UserModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -255,6 +303,20 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>UserModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <EntityDeploy Include="Session3Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Session3Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Session2Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Session2Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Session2Model.edmx.diagram">
+      <DependentUpon>Session2Model.edmx</DependentUpon>
+    </None>
+    <None Include="Session3Model.edmx.diagram">
+      <DependentUpon>Session3Model.edmx</DependentUpon>
+    </None>
     <None Include="UserModel.edmx.diagram">
       <DependentUpon>UserModel.edmx</DependentUpon>
     </None>
@@ -278,6 +340,26 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>EntityData.edmx</DependentUpon>
       <LastGenOutput>EntityData.cs</LastGenOutput>
+    </Content>
+    <Content Include="Session2Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Session2Model.edmx</DependentUpon>
+      <LastGenOutput>Session2Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Session2Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Session2Model.edmx</DependentUpon>
+      <LastGenOutput>Session2Model.cs</LastGenOutput>
+    </Content>
+    <Content Include="Session3Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Session3Model.edmx</DependentUpon>
+      <LastGenOutput>Session3Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Session3Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Session3Model.edmx</DependentUpon>
+      <LastGenOutput>Session3Model.cs</LastGenOutput>
     </Content>
     <Content Include="UserModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

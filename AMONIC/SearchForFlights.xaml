@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AMONIC"
         mc:Ignorable="d"
-        Title="SearchForFlights" Height="450" Width="800">
+        Title="SearchForFlights" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -21,11 +21,11 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Label Grid.Column="0" Content="From" VerticalAlignment="Center"/>
-            <ComboBox Grid.Column="0" Width="200" HorizontalAlignment="Right"  VerticalAlignment="Center"/>
+            <ComboBox x:Name="cbFrom" Grid.Column="0" Width="200" HorizontalAlignment="Right"  VerticalAlignment="Center"/>
             <Label Grid.Column="1" Content="To" VerticalAlignment="Center"/>
-            <ComboBox Grid.Column="1" Width="200" HorizontalAlignment="Right"  VerticalAlignment="Center"/>
-            <Label Grid.Column="2" Content="Sort By" VerticalAlignment="Center"/>
-            <ComboBox Grid.Column="2" Width="200" HorizontalAlignment="Right"  VerticalAlignment="Center"/>
+            <ComboBox x:Name="cbTo" Grid.Column="1" Width="200" HorizontalAlignment="Right"  VerticalAlignment="Center"/>
+            <Label Grid.Column="2" Content="Cabin Type" VerticalAlignment="Center"/>
+            <ComboBox x:Name="cbCabinType" Grid.Column="2" Width="200" HorizontalAlignment="Right"  VerticalAlignment="Center"/>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -38,18 +38,18 @@
             <RadioButton Content="Return" Grid.Column="0" VerticalAlignment="Center"/>
             <RadioButton Content="One Way" Grid.Column="1" VerticalAlignment="Center"/>
             <Label Content="OutBound" Grid.Column="2" VerticalAlignment="Center"/>
-            <DatePicker Grid.Column="2" Width="150" Height="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <DatePicker x:Name="DateOutbound" Grid.Column="2" Width="150" Height="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
             <Label Content="Return" Grid.Column="3" VerticalAlignment="Center"/>
             <DatePicker Grid.Column="3" Width="150" Height="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-            <Button Content="Apply" Grid.Column="4" Width="100" Height="20" VerticalAlignment="Center"/>
+            <Button x:Name="btnApply" Click="btnApply_Click" Content="Apply" Grid.Column="4" Width="100" Height="20" VerticalAlignment="Center"/>
         </Grid>
         <Label Content="OutBound Flight Details" Grid.Row="2"/>
         <CheckBox Content="Display Three days before and after" Margin="0 0 20 0" Grid.Row="2" HorizontalAlignment="Right"/>
-        <DataGrid Grid.Row="2" Margin="0 20"/>
+        <DataGrid x:Name="dgOutbound"  Grid.Row="2" Margin="0 20"/>
 
         <Label Content="Return Flight Details" Grid.Row="3"/>
         <CheckBox Content="Display Three days before and after" Margin="0 0 20 0" Grid.Row="3" HorizontalAlignment="Right"/>
-        <DataGrid Grid.Row="3" Margin="0 20"/>
+        <DataGrid x:Name="dgReturn" Grid.Row="3" Margin="0 20"/>
 
         <Grid Grid.Row="4">
             <Grid.ColumnDefinitions>

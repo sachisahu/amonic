@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AMONIC"
         mc:Ignorable="d"
-        Title="ManageFlightSchedules" Height="450" Width="800">
+        Title="ManageFlightSchedules" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -20,11 +20,11 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Label Grid.Column="0" Content="From"/>
-            <ComboBox Grid.Column="0" Margin="50 10 0 10"/>
+            <ComboBox x:Name="cbFrom" Grid.Column="0" Margin="50 10 0 10"/>
             <Label Grid.Column="1" Content="To"/>
-            <ComboBox Grid.Column="1" Margin="50 10 0 10"/>
+            <ComboBox x:Name="cbTo" Grid.Column="1" Margin="50 10 0 10"/>
             <Label Grid.Column="2" Content="Sort By"/>
-            <ComboBox Grid.Column="2" Margin="50 10 0 10"/>
+            <ComboBox x:Name="cbSortby" Grid.Column="2" Margin="50 10 0 10"/>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -33,10 +33,10 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Label Grid.Column="0" Content="Outbound"/>
-            <DatePicker Grid.Column="0" Margin="70 5 0 10"/>
-            <Label Grid.Column="1" Content="Outbound"/>
-            <TextBox Grid.Column="1" Margin="70 5 0 10"/>
-            <Button Grid.Column="2" Content="Apply" Margin="40 5 30 5"/>
+            <DatePicker x:Name="dtOutbound" Grid.Column="0" Margin="70 5 0 10"/>
+            <Label Grid.Column="1" Content="Flight Num"/>
+            <TextBox x:Name="txtfligt" Grid.Column="1" Margin="70 5 0 10"/>
+            <Button x:Name="btnApply" Click="btnApply_Click" Grid.Column="2" Content="Apply" Margin="40 5 30 5"/>
         </Grid>
         <Grid Grid.Row="3">
             <Grid.ColumnDefinitions>
@@ -49,7 +49,7 @@
             <Button Grid.Column="2" Content="Import Canges" Margin="30 5 20 5"/>
         </Grid>
 
-        <DataGrid Grid.Row="2" Margin="30"/>
+        <DataGrid x:Name="dgFilghtsSchedule" Grid.Row="2" Margin="30" SelectionChanged="dgFilghtsSchedule_SelectionChanged" SelectedCellsChanged="dgFilghtsSchedule_SelectedCellsChanged" />
 
 
     </Grid>

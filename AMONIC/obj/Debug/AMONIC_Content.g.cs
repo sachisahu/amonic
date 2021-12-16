@@ -10,6 +10,10 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("entitydata.context.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("entitydata.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("session2model.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("session2model.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("session3model.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("session3model.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("usermodel.context.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("usermodel.tt")]
 

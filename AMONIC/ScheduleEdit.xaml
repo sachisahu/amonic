@@ -20,13 +20,13 @@
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="1" Orientation="Horizontal">
                 <Label Content="From:" Margin="40 0 0 0"/>
-                <Label Content="AUH"/>
+                <Label Content="From" x:Name="lblFrom"/>
 
                 <Label Content="To:" Margin="30 0 0 0"/>
-                <Label Content="ADE"/>
+                <Label Content="ADE" x:Name="lblTo"/>
 
                 <Label Content="Aircraft:" Margin="50 0 0 0"/>
-                <Label Content="Boeing 739"/>
+                <Label Content="Boeing 739" x:Name="lblAricraft"/>
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1">
@@ -37,13 +37,13 @@
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="1" Orientation="Horizontal">
                 <Label Content="Date" Height="30"/>
-                <DatePicker Height="30" Margin="20 0 0 0"/>
+                <DatePicker Height="30" Margin="20 0 0 0" x:Name="dpDate"/>
 
                 <Label Content="Time" Height="30" Margin="20 0 0 0"/>
-                <TextBox Width="100" Height="30" Margin="20 0 0 0"/>
+                <TextBox Width="100" Height="30" Margin="20 0 0 0" x:Name="txtTime"/>
 
                 <Label Content="Economy Price $" Height="30" Margin="20 0 0 0"/>
-                <TextBox Width="100" Height="30" Margin="20 0 0 0"/>
+                <TextBox Width="100" Height="30" Margin="20 0 0 0" x:Name="txtEcoPrice"/>
 
             </StackPanel>
         </Grid>
@@ -56,7 +56,7 @@
 
             <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" >
                 <Button Content="Search Flight" Width="100" Height="25" Margin="0 0 30 0" x:Name="SearchForFlight" Click="SearchForFlight_Click"/>
-                <Button Content="Update" Width="100" Height="25"/>
+                <Button Content="Update" Width="100" Height="25" x:Name="btnUpdate" Click="btnUpdate_Click"/>
                 <Button Content="Cancel" Width="100" Height="25" Margin="40 0 30 0"/>
             </StackPanel>
         </Grid>

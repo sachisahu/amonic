@@ -20,16 +20,16 @@
             
         </StackPanel>
         <StackPanel Grid.Column="1" >
-            <TextBox Width="300" Margin="10 55 10 10" HorizontalAlignment="Left" x:Name="Email"/>
-            <TextBox Width="300" Margin="10 15 10 10" HorizontalAlignment="Left"/>
-            <TextBox Width="300" Margin="10 15 10 10" HorizontalAlignment="Left"/>
-            <ComboBox Width="300" Margin="10 15 10 10" HorizontalAlignment="Left"/>
-            <RadioButton Name="User" Margin="10 15 10 10" HorizontalAlignment="Left">User</RadioButton>
-            <RadioButton Name="Admin" Margin="10 5 10 10" HorizontalAlignment="Left">Admin</RadioButton>
+            <TextBox Width="300" Margin="10 55 10 10" HorizontalAlignment="Left" x:Name="txtEmail"/>
+            <TextBox Width="300" Margin="10 15 10 10" HorizontalAlignment="Left" x:Name="txtfName"/>
+            <TextBox Width="300" Margin="10 15 10 10" HorizontalAlignment="Left" x:Name="txtlName"/>
+            <ComboBox Width="300" Margin="10 15 10 10" HorizontalAlignment="Left" x:Name="cbOffice"/>
+            <RadioButton  Margin="10 15 10 10" HorizontalAlignment="Left" x:Name="rbUser">User</RadioButton>
+            <RadioButton  Margin="10 5 10 10" HorizontalAlignment="Left" x:Name="rbAdmin">Admin</RadioButton>
             
         </StackPanel>
         <StackPanel Grid.ColumnSpan="2" Grid.Column="0" Margin="10 300 10 10" Orientation="Horizontal">
-            <Button Content="Apply" Width="150" Height="30" Margin="200 10 10 40"/>
+            <Button Content="Apply" x:Name="Apply" Width="150" Height="30" Margin="200 10 10 40" Click="Apply_Click"/>
             <Button Content="Cancel" Width="150" Height="30" Margin="20 10 10 40"/>
         </StackPanel>
         

@@ -19,9 +19,53 @@ namespace AMONIC
     /// </summary>
     public partial class EditRole : Window
     {
+        AmonicDB amonic = new AmonicDB();
         public EditRole()
         {
             InitializeComponent();
+        }
+
+        private void Apply_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (rbUser.IsChecked == true)
+                {
+                    var email = txtEmail.Text;
+                    var row = amonic.Users.Where(c => c.Email == email).FirstOrDefault();
+                    if(row == null)
+                    {
+                        MessageBox.Show("User Not Found");
+                    }
+                    else
+                    {
+                        row.RoleID = 2;
+                    }
+                    
+                }
+                if (rbAdmin.IsChecked == true)
+                {
+                    var email = txtEmail.Text;
+                    var row = amonic.Users.Where(c => c.Email == email).FirstOrDefault();
+                    if (row == null)
+                    {
+                        MessageBox.Show("User Not Found");
+                    }
+                    else
+                    {
+                        row.RoleID = 1;
+                    }
+
+                }
+            }
+            catch(Exception d)
+            {
+                MessageBox.Show(""+d);
+            }
+            finally
+            {
+                amonic.SaveChanges();
+            }
         }
     }
 }
